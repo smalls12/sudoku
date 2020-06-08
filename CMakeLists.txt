@@ -1,11 +1,9 @@
 cmake_minimum_required(VERSION 3.5.1)
 
 # Set the project name to your project name, my project isn't very descriptive
-project(sudoku CXX)
-# set(CMAKE_CXX_STANDARD 17)
+project(sudoku)
+set(CMAKE_CXX_FLAGS "-std=c++17")
 # include(cmake/StandardProjectSettings.cmake)
-
-add_compile_options( "-std=c++17" )
 
 # Link this 'library' to set the c++ standard / compile-time options requested
 # add_library(project_options INTERFACE)
