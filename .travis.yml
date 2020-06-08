@@ -20,7 +20,8 @@ before_install:
 
 script:
   - sudo mkdir build
-  - cd build; sudo cmake ..
+  - cd build
+  - sudo cmake ..
   - sudo cmake --build . -- -j2
   - sudo ctest -j2
 
