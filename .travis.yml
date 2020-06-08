@@ -19,7 +19,7 @@ before_install:
  - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
 
 script:
-  - mkdir build
+  - sudo mkdir build
   - cd build; cmake ..
   - cmake --build . -- -j2
   - ctest -j2
