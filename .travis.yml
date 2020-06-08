@@ -17,12 +17,13 @@ before_install:
  - sudo make
  - sudo cp -a include/gtest /usr/include
  - sudo cp -a libgtest_main.so libgtest.so /usr/lib/
+ - cd "${TRAVIS_BUILD_DIR}"
 
 script:
   - sudo mkdir build
   - cd build
   - sudo cmake ..
-  - sudo cmake --build . -- -j2
-  - sudo ctest -j2
+  - sudo make
+  - sudo ctest
 
 sudo: required
