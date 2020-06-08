@@ -8,16 +8,16 @@ addons:
     sources:
       - ubuntu-toolchain-r-test
     packages:
-      - gcc-9
-      - g++-9
+      - gcc-7
+      - g++-7
       - cmake
       - lcov
 
 before_install:
 #  - sudo apt-get -qq update
 #  - sudo apt-get install -y cmake
- - sudo ln -s /usr/bin/gcc-9 /usr/local/bin/gcc
- - sudo ln -s /usr/bin/g++-9 /usr/local/bin/g++
+ - sudo ln -s /usr/bin/gcc-7 /usr/local/bin/gcc
+ - sudo ln -s /usr/bin/g++-7 /usr/local/bin/g++
  - sudo wget https://github.com/google/googletest/archive/release-1.8.1.tar.gz
  - sudo tar xf release-1.8.1.tar.gz
  - cd googletest-release-1.8.1/googletest
@@ -42,7 +42,7 @@ script:
 
 after_success:
   # capture coverage info
-  - sudo lcov --gcov-tool gcov-9 --directory . --capture --output-file coverage.info
+  - sudo lcov --gcov-tool gcov-7 --directory . --capture --output-file coverage.info
   # filter out system and extra files.
   # To also not include test code in coverage add them with full path to the patterns: '*/tests/*'
   - sudo lcov --remove coverage.info '/usr/*' "${HOME}"'/.cache/*' --output-file coverage.info
