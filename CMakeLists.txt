@@ -58,9 +58,9 @@ add_library(project_warnings INTERFACE)
 
 # Add googletest directly to our build. This defines
 # the gtest and gtest_main targets.
-add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
-                 ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
-                 EXCLUDE_FROM_ALL)
+# add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
+#                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
+#                  EXCLUDE_FROM_ALL)
 
 option(BUILD_SHARED_LIBS "Enable compilation of shared libraries" OFF)
 option(ENABLE_TESTING "Enable Test Builds" ON)
