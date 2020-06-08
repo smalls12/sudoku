@@ -3,7 +3,7 @@ language: cpp
 install:
   - pip install --user conan cmake
 
-os: osx
+os: linux
 compiler: gcc
 
 addons:
